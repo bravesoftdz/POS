@@ -1,0 +1,174 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{1E053BC5-6685-4F2C-928F-071447000DE0}</ProjectGuid>
+			<ProjectVersion>12.2</ProjectVersion>
+			<MainSource>POS.dpr</MainSource>
+			<Base>True</Base>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<Platform>Win32</Platform>
+			<AppType>Application</AppType>
+			<FrameworkType>VCL</FrameworkType>
+			<DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<DCC_UsePackage>vcl;rtl;vclactnband;xmlrtl;inet;intrawebdb_110_150;Intraweb_110_150;vclimg;soaprtl;dsnap;dbrtl;vclie;IndyProtocols;inetdbbde;inetdbxpress;vclx;VclSmp;svnui;svn;bdertl;TeeUI;TeeDB;Tee;vcldb;vcldbx;vcltouch;dsnapcon;vclib;ibxpress;adortl;IndyCore;IndySystem;websnap;webdsnap;inetdb;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapClient;dbxcds;DataSnapServer;AzureCloud;DBXInterBaseDriver;DBXMySQLDriver;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;frx15;frxADO15;frxBDE15;frxDB15;frxDBX15;frxe15;frxIBX15;frxTee15;fs15;fsADO15;fsBDE15;fsDB15;fsIBX15;fsTee15;ertemsoft;dacvcl150;dac150;crcontrols150;unidacvcl150;unidac150;chikat;clinetsuitedXE;dxCoreRS15;cxLibraryRS15;dxGDIPlusRS15;dxThemeRS15;cxEditorsRS15;cxDataRS15;cxExtEditorsRS15;dxBarRS15;dxComnRS15;dxBarDBNavRS15;dxBarExtDBItemsRS15;dxBarExtItemsRS15;dxRibbonRS15;cxBarEditItemRS15;dxdbtrRS15;dxtrmdRS15;dxmdsRS15;dxDockingRS15;dxFlowChartRS15;cxPageControlRS15;dxLayoutControlRS15;dxNavBarRS15;dxorgcRS15;dxdborRS15;cxGridRS15;cxExportRS15;cxPivotGridRS15;cxPivotGridChartRS15;cxPivotGridOLAPRS15;cxTreeListRS15;cxTreeListdxBarPopupMenuRS15;cxSchedulerRS15;cxSchedulerGridRS15;dxsbRS15;dcldxSkinsCoreRS15;dxSkinsCoreRS15;dxSkinscxPCPainterRS15;dxSkinscxScheduler3PainterRS15;dxSkinsdxDLPainterRS15;dxSkinsdxBarPainterRS15;dxSkinsdxNavBar2PainterRS15;dxSpellCheckerRS15;cxSpreadSheetRS15;cxVerticalGridRS15;dxPSCoreRS15;dxPSLnksRS15;dxPScxCommonRS15;dxPScxExtCommonRS15;dxPScxGrid6LnkRS15;dxPScxPivotGrid2LnkRS15;dxPScxScheduler3LnkRS15;dxPScxSSLnkRS15;dxPScxTL5LnkRS15;dxPScxVGridLnkRS15;dxPSTeeChartRS15;dxPSDBTeeChartRS15;dxPSdxOCLnkRS15;dxPSdxDBOCLnkRS15;dxPSdxDBTVLnkRS15;dxPSdxFCLnkRS15;dxPSdxLC2LnkRS15;dxPScxPCProdRS15;dxPsPrVwAdvRS15;dxPSPrVwRibbonRS15;dxSkinsdxRibbonPainterRS15;dxSkinXmas2008BlueRS15;dxSkinBlackRS15;dxSkinBlueRS15;dxSkinCaramelRS15;dxSkinCoffeeRS15;dxSkinDarkRoomRS15;dxSkinDarkSideRS15;dxSkinFoggyRS15;dxSkinGlassOceansRS15;dxSkiniMaginaryRS15;dxSkinLilianRS15;dxSkinLiquidSkyRS15;dxSkinLondonLiquidSkyRS15;dxSkinMcSkinRS15;dxSkinMoneyTwinsRS15;dxSkinOffice2007BlackRS15;dxSkinOffice2007BlueRS15;dxSkinOffice2007GreenRS15;dxSkinOffice2007PinkRS15;dxSkinOffice2007SilverRS15;dxSkinOffice2010BlackRS15;dxSkinOffice2010BlueRS15;dxSkinOffice2010SilverRS15;dxSkinPumpkinRS15;dxSkinSevenRS15;dxSkinSharpRS15;dxSkinSilverRS15;dxSkinSpringTimeRS15;dxSkinStardustRS15;dxSkinSummer2008RS15;dxSkinValentineRS15;RaudusD150</DCC_UsePackage>
+			<DCC_ImageBase>00400000</DCC_ImageBase>
+			<DCC_DcuOutput>.\$(Config)\$(Platform)</DCC_DcuOutput>
+			<DCC_UnitAlias>WinTypes=Windows;WinProcs=Windows;DbiTypes=BDE;DbiProcs=BDE;$(DCC_UnitAlias)</DCC_UnitAlias>
+			<DCC_ExeOutput>.\$(Config)\$(Platform)</DCC_ExeOutput>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+			<DCC_Optimize>false</DCC_Optimize>
+			<DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+			<DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+			<DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+			<DCC_DebugInformation>false</DCC_DebugInformation>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="POS.dpr">
+				<MainSource>MainSource</MainSource>
+			</DelphiCompile>
+			<DCCReference Include="Menu Aplikasi\Main.pas">
+				<Form>MainForm</Form>
+			</DCCReference>
+			<DCCReference Include="Informasi\info.pas">
+				<Form>InformasiFrame</Form>
+				<DesignClass>TFrame</DesignClass>
+			</DCCReference>
+			<DCCReference Include="Template\template.pas">
+				<Form>templateForm</Form>
+			</DCCReference>
+			<DCCReference Include="Merk\Merk.pas">
+				<Form>MerkForm</Form>
+			</DCCReference>
+			<DCCReference Include="Library\uInfoHardware.pas">
+				<Form>FMInfoAplikasi</Form>
+			</DCCReference>
+			<DCCReference Include="Library\AES.pas"/>
+			<DCCReference Include="Library\ElAES.pas"/>
+			<DCCReference Include="Library\eshardwareid.pas"/>
+			<DCCReference Include="Library\FormConnection.pas">
+				<Form>DatabasePromptForm</Form>
+			</DCCReference>
+			<DCCReference Include="Kategori\Kategori.pas">
+				<Form>KategoriForm</Form>
+			</DCCReference>
+			<DCCReference Include="Lokasi-Rak\Rak.pas">
+				<Form>RakForm</Form>
+			</DCCReference>
+			<DCCReference Include="Barang\Barang.pas">
+				<Form>BarangForm</Form>
+			</DCCReference>
+			<DCCReference Include="Template\templatestayontop.pas">
+				<Form>FormTemplateStayOnTop</Form>
+			</DCCReference>
+			<DCCReference Include="Barang\FBarang.pas">
+				<Form>TransaksiBarang</Form>
+			</DCCReference>
+			<DCCReference Include="Jenis\Jenis.pas">
+				<Form>JenisForm</Form>
+			</DCCReference>
+			<DCCReference Include="Golongan\Golongan.pas">
+				<Form>GolonganForm</Form>
+			</DCCReference>
+			<DCCReference Include="Gudang\Gudang.pas">
+				<Form>GudangForm</Form>
+			</DCCReference>
+			<DCCReference Include="Cabang\Cabang.pas">
+				<Form>CabangForm</Form>
+			</DCCReference>
+			<DCCReference Include="Valuta Purchase\ValutaPurchase.pas">
+				<Form>ValutaPurchaseForm</Form>
+			</DCCReference>
+			<DCCReference Include="Valuta Sales\ValutaSales.pas">
+				<Form>ValutaSalesForm</Form>
+			</DCCReference>
+			<DCCReference Include="Saldo Awal\Barang\SaldoAwalBarang.pas">
+				<Form>SaldoAwalBarangForm</Form>
+			</DCCReference>
+			<DCCReference Include="Search\Search.pas">
+				<Form>SearchForm</Form>
+			</DCCReference>
+			<DCCReference Include="WilayahPurchase\WilayahPurchase.pas">
+				<Form>WilayahPurchaseForm</Form>
+			</DCCReference>
+			<DCCReference Include="WilayahSales\WilayahSales.pas">
+				<Form>WilayahSalesForm</Form>
+			</DCCReference>
+			<DCCReference Include="Keterangan dan Gambar\KeteranganGambar.pas">
+				<Form>KeteranganGambarForm</Form>
+			</DCCReference>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+		<Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj"/>
+		<ProjectExtensions>
+			<Borland.Personality>Delphi.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Delphi.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">1057</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription"/>
+						<VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName"/>
+						<VersionInfoKeys Name="LegalCopyright"/>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName"/>
+						<VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments"/>
+					</VersionInfoKeys>
+					<Source>
+						<Source Name="MainSource">POS.dpr</Source>
+					</Source>
+				</Delphi.Personality>
+				<Platforms>
+					<Platform value="Win32">True</Platform>
+				</Platforms>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>

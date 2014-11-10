@@ -1,0 +1,9 @@
+H.beli = 1000
+profit = 10 %
+profit_nilai = (100 + 10 /100 * 1000) - 1000;
+
+
+
+Hbeli = 1000
+profitNilai = 100
+Profit = 100/1000 * 100 = 10

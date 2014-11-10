@@ -1,0 +1,44 @@
+- Pengerjaan Kencana Mixing
+	* 13052013 (Minggu I)
+	1. Untuk Master 
+		A. Merk [OK] 
+		B. Kategori [OK]
+		C. Lokasi/Rak [OK]
+		D. Barang [OK]
+		E. Jasa [18052013]
+		F. Supplier [18052013]
+		G. Customer [18052013]
+		H. Sales [18052013]
+		I. Biaya/Pengeluaran [18052013]
+		J. User [18052013]		
+		K. Jenis [OK]
+		L. Valuta Purchase [OK]
+		M. Valuta Sales [OK]
+		N. Gudang [OK]
+		O. Cabang [OK]
+		P. Golongan [OK]
+		Q. Wilayah Purchase [18052013]
+		R. Wilayah Sales [18052013]
+	2. Transaksi
+		
+	3. Reporting
+	
+	4. Saldo Awal
+	   a. Barang [21052013] -> kurang untuk simpan data dan hapus data yang sudah ada
+	
+	
+	Database 
+	Relasikan Merk, Kategori, dan Lokasi/rak dengan master Barang...[OK]
+	Relasikan Barang dengan Min Max , Harga Beli, Harga Jual khusus untuk trigger saat Insert data barang sudah terkoneksi/integrasi [OK]
+	Relasikan Barang dengan Min Max , Harga Beli, Harga Jual khusus untuk trigger saat penghapusan data barang harus mengecek kedalam tiga table ini [OK]
+	
+	
+	
+	Note : 
+	+ Masih Kurang Untuk Relasi kan dengan Min Max Per Gudang dan Harga Beli dan juga Harga Jual [OK]
+	+ Masih kebingungan untuk pengecekan kondisi profit_ = 1 di PXSystem, saat Barang di Edit maka akan terupdate untuk nilai jual1,2,3 berdasarkan
+	  hitung profit yang ada di table PXHarga [OK].
+	+ Trigger untuk Edit data dan Hapus, untuk edit harus melakukan pengecekan nilai lama dengan nilai baru khusus untuk table2 yang 
+	  terelasi dengan INBarang dan untuk hapus maka akan menghapus semua data yang berhubungan dengan INBarang 
+	+ Untuk pengecekan hapus yang belum [PXMerek, PXModel, PXMotif, PXRak, PXSize, PXType, PXValuta, PXVertion, PXWarna]
+    - PXKategori Belum digunakan  
